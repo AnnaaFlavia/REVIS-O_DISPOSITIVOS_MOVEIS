@@ -47,10 +47,8 @@ XML:
 </LinearLayout>
 
 Kotlin:
-// Movie.kt - Classe modelo para o filme
 data class Movie(val title: String, val genre: String, val year: Int)
 
-// MovieAdapter.kt - Adapter para o RecyclerView
 class MovieAdapter(private val movieList: List<Movie>) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -74,7 +72,6 @@ class MovieAdapter(private val movieList: List<Movie>) : RecyclerView.Adapter<Mo
     override fun getItemCount() = movieList.size
 }
 
-// MainActivity.kt - Atividade principal
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,8 +84,7 @@ class MainActivity : AppCompatActivity() {
         val movies = listOf(
             Movie("The Shawshank Redemption", "Drama", 1994),
             Movie("The Godfather", "Crime", 1972),
-            Movie("The Dark Knight", "Action", 2008),
-            // Adicione mais filmes conforme necessário
+            Movie("The Dark Knight", "Ação", 2008),
         )
 
         val adapter = MovieAdapter(movies)
